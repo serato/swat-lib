@@ -9,6 +9,11 @@ pylint = "*"
 [packages]
 requests = "*"
 pytest = "*"
+pyyaml = "*"
+Logging = "*"
+Pytest = "*"
+Selenium = "*"
+
 
 [requires]
 python_version = "3.7"
