@@ -1,6 +1,6 @@
 # Import all files to be accessed
-from .utilities.framework import *
-from .utilities.emails import *
+from .utilities import framework
+from .utilities import emails
 
 
-name = 'serato_swat_lib'
+name = 'swat_lib'
