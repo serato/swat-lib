@@ -1,6 +1,5 @@
 # Import all files to be accessed
-from .utilities import framework
-from .utilities import emails
+from .utilities import *
 
 
 name = 'swat_lib'
