@@ -34,7 +34,7 @@ class Email(object):
 class Gmail(object):
     SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
-    def __init__(self, application_name='Web Test Automation', secrets_file_name='gmail_client_secret.json'):
+    def __init__(self, application_name='Web Test Automation', secrets_file_name='credentials.json'):
         self.application_name = application_name
         self.secrets_file_name = secrets_file_name
 
@@ -143,7 +143,7 @@ class Gmail(object):
         message = self.parse_metadata_to_obj(data)
         return Email(mail_id).load(message)
 
-    def get_emails(self, service, user_id='me'):
+    def get_emails(self, service, user_id='me', limit=10):
         """
         Requests all the email from gmail server and converts it to a list of Email object
         :param user_id: 'me' define current user logged in
@@ -154,7 +154,7 @@ class Gmail(object):
         # Parse the representation of the email to a Message object, and then to an Email object
         mailL = []
         for email in data['messages']:
-            if len(mailL) == 10:
+            if len(mailL) == limit:
                 break 
             try:
                 """Get a specified email and make an Email Object."""
