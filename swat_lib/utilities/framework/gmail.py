@@ -176,8 +176,7 @@ def main():
     results = Gmail().get_emails(gmService)
 
     # Call the Gmail API
-    print(results)
-    # return results
+    return results
 
 
 if __name__ == '__main__':
