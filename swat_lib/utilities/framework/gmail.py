@@ -162,7 +162,7 @@ class Gmail(object):
                 # print(email)
                 mailL.append(email)
             except Exception as e:
-                print('An error occurred: %s' % e)
+                # print('An error occurred: %s' % e)
         return mailL
 
 def main():
